@@ -55,7 +55,7 @@ public class BurpExtender implements IBurpExtender, IHttpListener, IProxyListene
 				checkParam.remove("cs");
 				String request = new String(httpRequest.getRequest());
 				stdout.println("request[" + request + "]");
-				String body = "";
+				String body = null;
 				try {
 					if (reInfo.getBodyOffset() > 0) {
 						 body = request.substring(reInfo.getBodyOffset());
